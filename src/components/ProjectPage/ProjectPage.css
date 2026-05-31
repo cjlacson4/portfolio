@@ -1,6 +1,6 @@
 .project-page {
   max-width: 1000px;
-  width: 95%;
+  width: min(95%, 1000px);
   min-height: calc(100vh - 12em);
   margin: 0 auto;
   padding: 3em 0 5em;
@@ -36,7 +36,8 @@
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--clr-bg-alt);
 }
 
 .project-page__controls {
@@ -65,8 +66,10 @@
   right: 0;
   bottom: 1.5em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.7em;
+  padding: 0 7.5em;
   background-color: transparent;
 }
 
@@ -89,6 +92,7 @@
 
 @media (max-width: 700px) {
   .project-page {
+    width: 92%;
     padding-top: 2em;
   }
 
@@ -97,7 +101,33 @@
   }
 
   .project-page__controls {
-    top: 1em;
-    bottom: auto;
+    position: static;
+    justify-content: center;
+    padding: 1em 0 0.8em;
+  }
+
+  .project-page__dots {
+    position: static;
+    padding: 0 1em 1em;
+  }
+
+  .project-page__arrow {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-page__title {
+    font-size: 1.7rem;
+  }
+
+  .project-page__description {
+    font-size: 1rem;
+  }
+
+  .project-page__dot {
+    width: 0.65em;
+    height: 0.65em;
   }
 }

@@ -26,7 +26,7 @@
 
 main {
   max-width: 1100px;
-  width: 95%;
+  width: min(95%, 1100px);
   margin: 0 auto;
 }
 
@@ -89,6 +89,7 @@ main {
   font-size: 0.9rem;
   text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .btn--outline {
@@ -146,7 +147,15 @@ main {
 }
 
 @media (max-width: 600px) {
+  main {
+    width: min(92%, 1100px);
+  }
+
   .section {
     margin-top: 4em;
+  }
+
+  .section__title {
+    margin-bottom: 0.8em;
   }
 }

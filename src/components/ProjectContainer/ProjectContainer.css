@@ -1,9 +1,11 @@
 .project {
-  padding: 2em;
+  padding: clamp(1.2em, 4vw, 2em);
   margin: 0 auto;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  width: 100%;
+  min-width: 0;
 }
 
 .project:hover {
@@ -13,7 +15,8 @@
 .project__image {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--clr-bg-alt);
   margin-bottom: 1.5em;
 }
 

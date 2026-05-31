@@ -3,18 +3,26 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
 import './ProjectContainer.css'
 
+const getProjectSlug = (project) =>
+  project.slug ||
+  project.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+
+const getImageSrc = (image) =>
+  image && image.startsWith('http')
+    ? image
+    : `${process.env.PUBLIC_URL}/images/${image}`
+
 const ProjectContainer = ({ project }) => (
   <div className='project'>
-
-    {project.image && (<img
-    src={
-      project.image.startsWith("http")
-        ? project.image
-        : `${process.env.PUBLIC_URL}/images/${project.image}`
-    }
-    alt={`${project.name} screenshot`}
-    style={{ width: '100%', objectFit: 'cover' }}
-    />
+    {project.image && (
+      <img
+        className='project__image'
+        src={getImageSrc(project.image)}
+        alt={`${project.name} screenshot`}
+      />
     )}
 
     <h3>{project.name}</h3>
@@ -42,7 +50,7 @@ const ProjectContainer = ({ project }) => (
 
     {project.livePreview && (
       <a
-        href={project.livePreview}
+        href={`#project/${getProjectSlug(project)}`}
         aria-label='live preview'
         className='link link--icon'
       >

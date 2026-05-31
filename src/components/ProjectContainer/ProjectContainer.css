@@ -10,6 +10,13 @@
   transform: translateY(-7px);
 }
 
+.project__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 1.5em;
+}
+
 .project__description {
   margin-top: 1em;
 }

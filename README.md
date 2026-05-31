@@ -1,5 +1,7 @@
 ## Preview
 
+![Portfolio preview](public/images/portfolio.png)
+
 [Live Demo](https://cjlacson4.github.io/portfolio)
 
 ## Instructions

@@ -15,7 +15,7 @@ const about = {
   // resume: 'https://example.com',
   social: {
     linkedin: 'https://www.linkedin.com/in/carl-james-lacson-a36429383',
-    github: 'https://github.com',
+    github: 'https://github.com/cjlacson4',
   },
 }
 

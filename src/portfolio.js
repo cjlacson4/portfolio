@@ -115,6 +115,17 @@ const projects = [
     image: 'phonebook/1.PNG',
     slides: ['phonebook/1.PNG'],
   },
+  {
+    slug: 'technopacer-ft',
+    name: 'The Technopacer-FT Information System',
+    description:
+      'A responsive publication website built to showcase newsletters, articles, and school-related content in an accessible and visually appealing format.',
+    stack: ['Framer'],
+    livePreview: true,
+    image: 'the_technopacer_ft/landing.PNG',
+    slides: ['the_technopacer_ft/landing.PNG'],
+    link: ['https://thetechnopacerft.framer.website/'],
+  },
 ]
 
 const skills = [
@@ -134,6 +145,8 @@ const skills = [
   'Laravel',
   'MySQL',
   'PostgreSQL',
+  'Figma',
+  'Framer',
 ]
 
 const contact = {

@@ -1,6 +1,7 @@
 import uniqid from 'uniqid'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LaunchIcon from '@material-ui/icons/Launch'
+import WebIcon from '@material-ui/icons/Web'
 import './ProjectContainer.css'
 
 const getProjectSlug = (project) =>
@@ -55,6 +56,18 @@ const ProjectContainer = ({ project }) => (
         className='link link--icon'
       >
         <LaunchIcon />
+      </a>
+    )}
+
+    {project.link && (
+      <a
+        href={project.link}
+        aria-label='live preview'
+        className='link link--icon'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        <WebIcon />
       </a>
     )}
   </div>

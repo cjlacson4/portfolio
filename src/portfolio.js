@@ -122,8 +122,8 @@ const projects = [
       'A responsive publication website built to showcase newsletters, articles, and school-related content in an accessible and visually appealing format.',
     stack: ['Framer'],
     livePreview: true,
-    image: 'the_technopacer_ft/landing.PNG',
-    slides: ['the_technopacer_ft/landing.PNG'],
+    image: 'the_technopacer_ft/Landing.PNG',
+    slides: ['the_technopacer_ft/Landing.PNG'],
     link: ['https://thetechnopacerft.framer.website/'],
   },
 ]

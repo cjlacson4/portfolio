@@ -72,6 +72,7 @@ to `"homepage": "https://yourusername.github.io"`.
 - To build and deploy, run the following commands:
 
 ```shell
+npm run build
 npm run deploy
 ```
 
